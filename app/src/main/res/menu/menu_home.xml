@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.RaisMedia.pharmaso.fragment.ProfilFragment">
+    <item
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:id="@+id/action_add_favorite"
+        android:title="Add to favorite ride"
+        android:icon="@drawable/ic_star_outline"/>
+</menu>

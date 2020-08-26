@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raismedia.taxiclient.activity.SubscribeActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/wave3">
+
+    <LinearLayout
+        android:gravity="right"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="5dp"
+            android:textSize="30sp"
+            android:textColor="@color/colorLogoBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_n_vehicle_information" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/recycler_view_category_vehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"/>
+
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_brand_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_business_card"
+                android:textSize="16sp"
+                android:id="@+id/brand_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/brand" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_model_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:maxLength="15"
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_business_card"
+                android:textSize="16sp"
+                android:id="@+id/model_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/model" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_color_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_business_card"
+                android:textSize="16sp"
+                android:id="@+id/color_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_numberplate_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:maxLength="12"
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_business_card"
+                android:textSize="16sp"
+                android:id="@+id/numberplate_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/number_plate" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_number_passengers_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:maxLength="2"
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_business_card"
+                android:textSize="16sp"
+                android:id="@+id/number_passengers_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/number_of_passengers" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<CheckBox-->
+        <!--android:id="@+id/check_email"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Recevoir de notification par mail" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:elevation="2dp"
+            app:backgroundTint="@color/quantum_lightgreenA700"
+            android:id="@+id/button_next"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/layout_button_choose"
+            android:tint="@color/colorWhite"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar_subs"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="23dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</LinearLayout>

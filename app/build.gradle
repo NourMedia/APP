@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.raismedia.taxiclient"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 2
+        versionName "1.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+    //tedruntile permission
+    implementation 'gun0912.ted:tedpermission:2.2.3'
+
+    //Horizontal date picker
+    implementation 'joda-time:joda-time:2.9.7'
+
+    //Timeline
+    implementation 'com.github.vipulasri:timelineview:1.0.6'
+
+    //Calendar
+    implementation 'com.applandeo:material-calendar-view:1.4.0'
+
+    //Paypal
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
+
+    //Credit Card
+    implementation 'com.craftman.cardform:cardform:0.0.2'
+
+    //Job Scheduler
+    implementation 'com.github.simplymadeapps:QuickPeriodicJobScheduler:-SNAPSHOT'
+
+    implementation 'com.github.jd-alexander:library:1.1.0'
+
+    //Volley
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+
+    //Google Map
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation('com.google.android.libraries.places:places:2.3.0') {
+        exclude module: 'volley'
+    }
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    //Place Picker
+    implementation 'com.sucho:placepicker:0.1.8'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41"
+
+    //Firebase
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+
+    //Retrofit
+    implementation('com.squareup.retrofit2:retrofit:2.2.0') {
+        // exclude Retrofit’s OkHttp peer-dependency module and define your own module import
+        exclude module: 'okhttp'
+    }
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+    //Braintree
+    implementation 'com.braintreepayments.api:drop-in:3.+'
+
+    //Dexter
+    implementation ("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor 'androidx.annotation:annotation:1.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation ("com.github.bumptech.glide:glide:4.9.0@aar") {
+        transitive = true
+    }
+
+}
+
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'

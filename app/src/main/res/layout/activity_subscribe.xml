@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raismedia.taxiclient.activity.SubscribeActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/wave">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="5dp"
+            android:textSize="30sp"
+            android:textColor="@color/colorLogoBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_nyour_information" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_firstname_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_profile_con"
+                android:textSize="16sp"
+                android:id="@+id/firstname_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/first_name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_phone_subs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:maxLength="15"
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_phone_outline"
+                android:textSize="16sp"
+                android:id="@+id/phone_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_email_insc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_message_outline"
+                android:textSize="16sp"
+                android:id="@+id/email_insc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password_inc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:maxLength="12"
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_password_outline"
+                android:textSize="16sp"
+                android:id="@+id/password_subs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password_conf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:maxLength="12"
+                android:drawableTint="@color/colorLogoBlack"
+                android:drawableRight="@drawable/ic_password_outline"
+                android:textSize="16sp"
+                android:id="@+id/password_conf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/confirm_password" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<CheckBox-->
+        <!--android:id="@+id/check_email"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Recevoir de notification par mail" />-->
+
+        <LinearLayout
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right">
+
+            <TextView
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="45dp"
+                android:paddingRight="45dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:id="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/botton1"
+                android:text="@string/send"
+                android:textColor="@color/colorLogoBlack"
+                android:layout_above="@+id/creer_compte"/>
+
+            <TextView
+                android:textStyle="normal"
+                android:gravity="center"
+                android:paddingLeft="45dp"
+                android:paddingRight="45dp"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center"
+                android:background="@drawable/botton2"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/i_have_account"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/already_registered" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:id="@+id/progressBar_subs"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

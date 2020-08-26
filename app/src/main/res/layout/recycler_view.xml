@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.raismedia.taxiclient.circleimage.CircleImageView
+                android:id="@+id/user_photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="120dp"
+                android:src="@drawable/user_profile"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="197dp"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorLogoBlack"
+                android:textSize="0sp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/drawer_conducteur"
+            android:layout_width="242dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="65dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="@string/my_status"
+                    android:textColor="@color/colorLogoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/statut_conducteur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:text="actif"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_statut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:text="" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/drawer_user"
+            android:layout_width="291dp"
+            android:layout_height="?attr/actionBarSize"
+            android:color="@android:color/transparent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="Jhon Doe"
+                    android:textColor="@color/colorLogoBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="120dp"
+                    android:text="+2260 70 00 00 00"
+                    android:textColor="@color/colorLogoBlack"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:padding="0dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvdrawer"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>
